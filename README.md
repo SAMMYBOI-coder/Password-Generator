@@ -1,1 +1,2 @@
-# Password-Generator
+# Password-Generator-Overview:
+This C program generates a random password of a specified length (between 8 and 64 characters) and evaluates its strength. The generatePassword function creates a password using a mix of uppercase, lowercase letters, digits, and special characters. The evaluatePasswordStrength function checks for the presence of these character types and ensures the password is at least 8 characters long, classifying it as "Strong" or "Weak." The main function handles user input, calls the password generation and evaluation functions, and displays the results.
