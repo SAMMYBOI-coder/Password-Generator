@@ -4,7 +4,6 @@
 #include <time.h>
 #include <ctype.h>
 
-
 void generatePassword(int length, char *password)
 {
 
