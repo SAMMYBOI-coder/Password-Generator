@@ -25,12 +25,12 @@ for (int i = 0; i < length; i++)
 
 
 const char *evaluatePasswordStrength(const char *password)
- {
-
-int hasLower = 0, hasUpper = 0, hasDigit = 0, hasSpecial = 0;
-
-for (int i = 0; i < strlen(password); i++)
 {
+
+    int hasLower = 0, hasUpper = 0, hasDigit = 0, hasSpecial = 0;
+
+    for (int i = 0; i < strlen(password); i++)
+    {
     if ( islower(password[i]) )
      hasLower = 1;
 
@@ -43,17 +43,17 @@ for (int i = 0; i < strlen(password); i++)
     else
     hasSpecial = 1;
 
-}
+    }
 
-if (hasLower == 1 && hasUpper == 1 && hasDigit == 1 && hasSpecial == 1
+    if (hasLower == 1 && hasUpper == 1 && hasDigit == 1 && hasSpecial == 1
     && strlen(password) >= 8)
 
- {
-    return "Strong";
- }
-    return "Weak";
+     {
+        return "Strong";
+     }
+        return "Weak";
 
- }
+}
 
 
 int main()
@@ -81,7 +81,7 @@ int main()
 
    printf("\nPassword Strength: %s\n", evaluatePasswordStrength(password));
 
-return 0;
+   return 0;
 
  }
 
