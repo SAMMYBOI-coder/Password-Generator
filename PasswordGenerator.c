@@ -6,7 +6,6 @@
 
 
 void generatePassword(int length, char *password)
-
 {
 
 char characters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}|\\:;,.<>?~`";
@@ -26,7 +25,6 @@ for (int i = 0; i < length; i++)
 
 
 const char *evaluatePasswordStrength(const char *password)
-
  {
 
 int hasLower = 0, hasUpper = 0, hasDigit = 0, hasSpecial = 0;
@@ -59,7 +57,6 @@ if (hasLower == 1 && hasUpper == 1 && hasDigit == 1 && hasSpecial == 1
 
 
 int main()
-
  {
 
     int length;
