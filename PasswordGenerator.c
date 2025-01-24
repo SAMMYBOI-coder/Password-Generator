@@ -11,8 +11,7 @@ void generatePassword(int length, char *password)
 char characters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}|\\:;,.<>?~`";
 int charactersSize = strlen(characters);
 
-srand(time(0));
-
+srand(time(0));//Seed a random number in a current time
 
 for (int i = 0; i < length; i++)
     {
@@ -23,8 +22,9 @@ for (int i = 0; i < length; i++)
 
 }
 
-
-const char *evaluatePasswordStrength(const char *password)
+// Function to evaluate password strength
+const char *evaluatePasswordStrength(const char *password)/* const ensures that the function cannot--
+-accidentally modify the password.  */
 {
 
     int hasLower = 0, hasUpper = 0, hasDigit = 0, hasSpecial = 0;
@@ -45,6 +45,7 @@ const char *evaluatePasswordStrength(const char *password)
 
     }
 
+    // Check if all criteria are met and length is sufficient
     if (hasLower == 1 && hasUpper == 1 && hasDigit == 1 && hasSpecial == 1
     && strlen(password) >= 8)
 
